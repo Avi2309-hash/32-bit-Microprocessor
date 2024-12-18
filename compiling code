@@ -1,0 +1,4 @@
+Compile and simulate using Icarus Verilog or other tools
+
+iverilog -g2012 InstructionRegister.sv GeneralPurposeRegister.sv ALU.sv DataMemory.sv ProgramMemory.sv Microprocessor.sv Microprocessor_tb.sv
+vvp a.out
