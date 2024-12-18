@@ -19,3 +19,12 @@ Time: 0 | PC: 00000000 Time: 15 | PC: 00000000 Time: 25 | PC: 00000004 Time: 35 
 ## Tools
 - **Language**: SystemVerilog
 - **Simulator**: Icarus Verilog
+
+Stage the files:
+git add Microprocessor.sv Microprocessor_tb.sv 
+
+Commit the files:
+git commit -m "Add 32-bit Microprocessor design and testbench"
+
+Push the files to GitHub:
+git push origin main
