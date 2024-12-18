@@ -1,0 +1,30 @@
+module Microprocessor_tb;
+
+    logic clk, reset;
+    logic [31:0] pc_out, instruction_out;
+
+    // Clock generation
+    always #5 clk = ~clk;
+
+    // DUT
+    Microprocessor uut (
+        .clk(clk),
+        .reset(reset),
+        .pc_out(pc_out),
+        .instruction_out(instruction_out)
+    );
+
+    initial begin
+        $monitor("Time: %0t | PC: %h | Instruction: %h", $time, pc_out, instruction_out);
+
+        // Initialize
+        clk = 0;
+        reset = 1;
+
+        #10 reset = 0; // Release reset
+        #100; // Run for 100 time units
+
+        $finish;
+    end
+
+endmodule
